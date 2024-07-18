@@ -9,9 +9,15 @@
     <h1>Authorization Code</h1>
     <p id="code"></p>
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const code = urlParams.get('code');
-        document.getElementById('code').textContent = code;
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+            if (code) {
+                document.getElementById('code').textContent = code;
+            } else {
+                document.getElementById('code').textContent = 'No authorization code found.';
+            }
+        };
     </script>
 </body>
 </html>
