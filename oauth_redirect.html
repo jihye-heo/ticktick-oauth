@@ -13,7 +13,7 @@
             const urlParams = new URLSearchParams(window.location.search);
             const code = urlParams.get('code');
             if (code) {
-                document.getElementById('code').textContent = 'This is the code: ' code;
+                document.getElementById('code').textContent = code;
             } else {
                 document.getElementById('code').textContent = 'No authorization code found.';
             }
